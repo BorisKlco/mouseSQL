@@ -14,3 +14,4 @@ RUN docker-php-ext-install pdo_pgsql pdo_sqlite zip
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
+COPY ./src .
