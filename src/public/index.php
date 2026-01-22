@@ -3,8 +3,8 @@ require '../vendor/autoload.php';
 
 use Core\App;
 
-define('SERVICE_NAME', getenv('SERVICE_NAME'));
-define('SERVICE_URL', getenv('SERVICE_URL'));
+define('SERVICE_NAME', getenv('SRV_NAME'));
+define('SERVICE_URL', getenv('SRV_URL'));
 define('SERVICE_LOGO', SERVICE_URL . '/img/logo.webp');
 
 define('PG_HOST', getenv('PG_HOST'));

@@ -23,8 +23,8 @@ services:
       dockerfile: ./php/Dockerfile    
     container_name: mousesql_php
     environment:
-      SERVICE_NAME: ${SERVICE_NAME}
-      SERVICE_URL: ${SERVICE_URL}
+      SRV_NAME: ${SRV_NAME}
+      SRV_URL: ${SRV_URL}
       PG_HOST: ${PG_HOST}
       PG_HOST_PUBLIC: ${PG_HOST_PUBLIC}
       PG_PORT: ${PG_PORT}
