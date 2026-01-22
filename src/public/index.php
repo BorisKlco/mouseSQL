@@ -24,6 +24,9 @@ if (filter_var(getenv('DEBUG'), FILTER_VALIDATE_BOOLEAN)) {
     error_reporting(E_ALL);
 }
 
+const BASE_PATH = __DIR__ . "/../";
+const VIEWS_PATH = BASE_PATH . "views/";
+
 session_start();
 
 new App();
