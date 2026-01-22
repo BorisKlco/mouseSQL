@@ -13,7 +13,7 @@ class Postgres
     {
 
         self::$db = new PDO(
-            dsn: "pgsql:host=" . PG_HOST . ";port=" . PG_PORT . ";dbname=postgres",
+            dsn: "pgsql:host=" . PG_HOST . ";port=5432;dbname=postgres",
             username: PG_ADMIN_USER,
             password: PG_ADMIN_PASSWORD,
             options: [
