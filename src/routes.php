@@ -3,14 +3,14 @@
 use Controller\Home;
 use Controller\User;
 use Controller\Dashboard;
-use Controller\Admin;
+#use Controller\Admin;
 use Core\App;
 
 App::get('/', [Home::class, 'index'])
     ->name('home');
 
-App::get('/test', [Admin::class, 'test']);
-App::post('/test', [Admin::class, 'test2']);
+#App::get('/test', [Admin::class, 'test']);
+#App::post('/test', [Admin::class, 'test2']);
 
 //Dashboard
 App::get('/dashboard', [Dashboard::class, 'index'])

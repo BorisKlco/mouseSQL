@@ -3,24 +3,26 @@ require '../vendor/autoload.php';
 
 use Core\App;
 
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+if ((bool) getenv('DEBUG') == true) {
+    ini_set('display_errors', '1');
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+}
 
-const SERVICE_NAME = 'MouseSQL';
-const SERVICE_URL = 'http://localhost:8080';
+const SERVICE_NAME = getenv('SERVICE_NAME');
+const SERVICE_URL = getenv('SERVICE_URL');
 const SERVICE_LOGO = SERVICE_URL . '/img/logo.webp';
 
-const PG_HOST = 'mousesql_postgres';
-const PG_HOST_PUBLIC = 'mousesql_postgres';
-const PG_PORT = 5432;
-const PG_ADMIN_USER = 'docker';
-const PG_ADMIN_PASSWORD = 'docker';
+const PG_HOST = getenv('PG_HOST');
+const PG_HOST_PUBLIC = getenv('PG_HOST_PUBLIC');
+const PG_PORT = getenv('PG_PORT');
+const PG_ADMIN_USER = getenv('PG_USR');
+const PG_ADMIN_PASSWORD = getenv('PG_PSW');
 
-const SMTP = '';
-const SMTP_username = '';
-const SMTP_password = '';
-const SMTP_email_from = '';
+const SMTP = getenv('STMP');
+const SMTP_username = getenv('SMTP_USR');
+const SMTP_password = getenv('STMP_PSW');
+const SMTP_email_from = getenv('STMP_MAILFROM');
 
 const BASE_PATH = __DIR__ . "/../";
 const VIEWS_PATH = BASE_PATH . "views/";
